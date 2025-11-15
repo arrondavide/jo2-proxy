@@ -144,7 +144,7 @@ class ProxyManager:
         valid_count = 0
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = {executor.submit(self.validate_proxy, proxy): proxy 
-                      for proxy in parsed_proxies[:10000]}  # Validate first 100 to save time
+                      for proxy in parsed_proxies[:30000]}  # Validate first 100 to save time
             
             for future in concurrent.futures.as_completed(futures):
                 try:
