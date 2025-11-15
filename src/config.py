@@ -13,12 +13,15 @@ PROXY_SOURCES = [
     'https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt',
     'https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt',
     'https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt',
+    'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-http.txt',
+    'https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt',
+    'https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt',
 ]
 
 # Proxy Settings
-MIN_PROXIES = 50  # Minimum number of working proxies to maintain
-MAX_PROXIES = 1000  # Maximum proxies to store
-VALIDATION_TIMEOUT = 5  # Seconds to wait for proxy validation
+MIN_PROXIES = 10  # Lower minimum requirement
+MAX_PROXIES = 5000  # Store more proxies
+VALIDATION_TIMEOUT = 10  # Give proxies more time (doubled from 5 to 10)
 REFRESH_INTERVAL = 3600  # Refresh proxy pool every hour (seconds)
 VALIDATION_URL = 'https://httpbin.org/ip'  # URL to test proxies
 
